@@ -2,21 +2,22 @@ package com.blogapp.aws.movieuitemplate.ui;
 
 import android.app.ActivityOptions;
 import android.content.Intent;
-import android.support.design.widget.TabLayout;
-import android.support.v4.view.ViewPager;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
 import android.widget.ImageView;
 import android.widget.Toast;
 
-import com.blogapp.aws.movieuitemplate.models.Movie;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+import androidx.viewpager.widget.ViewPager;
+
+import com.blogapp.aws.movieuitemplate.R;
 import com.blogapp.aws.movieuitemplate.adapters.MovieAdapter;
 import com.blogapp.aws.movieuitemplate.adapters.MovieItemClickListener;
-import com.blogapp.aws.movieuitemplate.R;
-import com.blogapp.aws.movieuitemplate.models.Slide;
 import com.blogapp.aws.movieuitemplate.adapters.SliderPagerAdapter;
+import com.blogapp.aws.movieuitemplate.models.Movie;
+import com.blogapp.aws.movieuitemplate.models.Slide;
+import com.google.android.material.tabs.TabLayout;
 
 import java.util.ArrayList;
 import java.util.List;

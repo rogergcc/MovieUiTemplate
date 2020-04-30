@@ -1,16 +1,20 @@
 package com.blogapp.aws.movieuitemplate.adapters;
 
 import android.content.Context;
-import android.support.annotation.NonNull;
-import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import androidx.annotation.NonNull;
+import androidx.recyclerview.widget.RecyclerView;
+
 import com.blogapp.aws.movieuitemplate.R;
 import com.blogapp.aws.movieuitemplate.models.Movie;
+import com.bumptech.glide.Glide;
+import com.bumptech.glide.load.resource.bitmap.CenterCrop;
+import com.bumptech.glide.load.resource.bitmap.RoundedCorners;
 
 import java.util.List;
 
@@ -44,8 +48,13 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.MyViewHolder
 
 
         myViewHolder.TvTitle.setText(mData.get(i).getTitle());
+
         myViewHolder.ImgMovie.setImageResource(mData.get(i).getThumbnail());
 
+        Glide.with(context)
+                .load(mData.get(i).getThumbnail())
+                .transform(new CenterCrop(), new RoundedCorners(35))
+                .into(myViewHolder.ImgMovie);
 
     }
 
