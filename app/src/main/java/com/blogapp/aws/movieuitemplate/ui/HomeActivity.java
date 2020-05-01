@@ -3,6 +3,8 @@ package com.blogapp.aws.movieuitemplate.ui;
 import android.app.ActivityOptions;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.widget.ImageView;
 import android.widget.Toast;
 
@@ -72,6 +74,38 @@ public class HomeActivity extends AppCompatActivity implements MovieItemClickLis
 
 
 
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()){
+//            case R.id.item_0:
+//                switchFragment(0);
+//                break;
+//            case R.id.item_1:
+//                switchFragment(1);
+//                break;
+//            case R.id.item_2:
+//                switchFragment(2);
+//                break;
+            case R.id.item_slidedesign:
+                startActivity(new Intent(HomeActivity.this, NewDesignMoviesActivity.class));
+                break;
+            case R.id.item_slide:
+                startActivity(new Intent(HomeActivity.this, NewDesignMoviesActivity.class));
+                break;
+//            case R.id.item_5:
+//                startActivity(new Intent(MainActivity.this, ViewPagerLayoutManagerActivity.class));
+//                break;
+
+        }
+        return super.onOptionsItemSelected(item);
     }
 
     @Override

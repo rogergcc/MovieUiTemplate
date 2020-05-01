@@ -11,18 +11,22 @@
     android:clickable="true"
     android:focusable="true"
     android:foreground="?attr/selectableItemBackgroundBorderless"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:weightSum="100"
+    >
 
 
     <ImageView
+
         android:id="@+id/item_movie_img"
         android:layout_width="match_parent"
-        android:layout_height="175dp"
+        android:layout_height="150dp"
         android:scaleType="centerCrop"
 
         android:src="@drawable/moana" />
 
     <TextView
+
         android:gravity="center"
         android:id="@+id/item_movie_title"
         android:layout_width="match_parent"
